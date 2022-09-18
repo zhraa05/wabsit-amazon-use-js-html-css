@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="minfil/css/all.css">
+    <link rel="stylesheet" href="minfil/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="header.js"></script>
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js" async
+        integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/" crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js"></script>u -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="fiarbas.js"></script>
+    <script src="script.js"></script>
+    <script src="header.js"></script>
+    <title>zaion</title>
+</head>
+
+<body>
+    <div class="bg-white w-full">
+        <div class="header h-16 bg-gray-900 flex items-center">
+            <div class="logo w-1/5 h-16 ml-10 ">
+                <img class="w-28 h-16 object-contain"
+                    src="https://www.pinclipart.com/picdir/big/57-576184_view-our-amazon-storefront-amazon-logo-white-png.png">
+            </div>
+            <input class="h-9 w-30 bg-gray-800 border 
+                border-gray-500 border-opacity-75 rounded-l-xl px-3 
+                text-white ml-6 focus:outline-none placeholder-white" id="search" type="text" placeholder="Search...">
+            <div class="categories h-9 w-30 bg-gray-800 border border-gray-500 
+                border-opacity-75 px-3 text-white flex items-center ">
+                categories
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+            <div class="search-icon h-9 w-10 bg-yellow-500 rounded-r-xl 
+            flex justify-center items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+            <div class="icons text-white flex items-center ml-auto mr-8 w-48 h-16 justify-around">
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <!-- Cart Icon -->
+                <a href="cart.html">
+                    <div class="cart-icon relative h-10 w-10 bg-yellow-500 flex items-center
+                     justify-center rounded-xl">
+                        <div class="cart-item-number text-gray-800 text-xs absolute
+                             -top-1 -right-1 h-4 w-4 bg-white rounded-full flex justify-center
+                             text-gray-600 items-center">
+                        </div>
+                        <svg class="h-4 w-4 text-gray-600" xmlns="http://owww.w3.org/2000/svg" class="h-6 w-6"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <svg class="rounded h-12 w-12" data-jdenticon-value="fatmt"></svg>
+            </div>
+        </div>
+        <div class="main h-100% flex">
+            <div class="hidden md:block border-t-2 border-gray-700 main-sidebar w-1/5 bg-gray-900 p-6">
+                <div class="sidebar-categories">
+                    <div
+                        class="sidebar-main-category text-yellow-500 cursor-pointer flex font-bold p-2 bg-gray-700 rounded-lg">
+                        <span class="w-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </span>
+                        <span>Categories</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2">
+                        <span class="w-8"></span>
+                        <span>Echo and Alexa</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2">
+                        <span class="w-8"></span>
+                        <span>Kindle</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2">
+                        <span class="w-8"></span>
+                        <span>Books</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2 mb-2">
+                        <span class="w-8"></span>
+                        <span>Electronics</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2">
+                        <span class="w-8"></span>
+                        <span>Home and Garden</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer flex font-bold p-2">
+                        <span class="w-8"></span>
+                        <span>Fashion</span>
+                    </div>
+                    <div class="sidebar-main-category text-white 
+                        cursor-pointer flex font-bold p-2 hover:bg-gray-700 rounded-xl mb-4">
+                        <span class="w-8">
+                            <i class="fas fa-percent"></i>
+                        </span>
+                        <span>Sell on zaion</span>
+                    </div>
+                    <div class="sidebar-main-category text-white cursor-pointer 
+                        flex font-bold p-2 hover:bg-gray-700 rounded-xl ">
+                        <span class="w-8">
+                            <i class="far fa-question-circle"></i>
+                        </span>
+                        <span>Help</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section flex-1 p-6 bg-gray-100">
+                <div class="main-section-banner h-44 rounded-lg flex items-end">
+                    <div
+                        class="button bg-white w-36 h-10 rounded-full flex justify-center items-center m-4 cursor-pointer">
+                        <h4 class="text-bold text-yellow-500">Browse Products</h4>
+                    </div>
+                </div>
+                <div class="main-section-categories mt-10 ">
+                    <h1 class="popular-categories font-bold
+                     text-gray-700 text-2xl flex items-center">
+                        Popular Categories
+                        <svg class="h-6 w-6 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </h1>
+                    <div class="categories flex flex-wrap">
+                        <div
+                            class="icon-desktop h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="icon-gift h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                            </svg>
+                        </div>
+                        <div
+                            class="icon-mobile h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="icon-book h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div
+                            class="icon-camera h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div class="icon-home h-20 w-20 bg-white rounded-xl flex justify-center items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <div class="icon-music h-20 w-20 bg-white rounded-xl flex justify-center 
+                            items-center mt-5 mr-6">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                        </div>
+                        <div
+                            class="icon-lightbulb h-20 w-20 bg-white rounded-xl mt-5 mr-6 flex justify-center items-center">
+                            <svg class="h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-section-deals mt-5">
+                    <h1 class="text-2xl font-bold text-gray-700 mb-5">Hot Deals 🔥</h1>
+                    <div class="main-section-products flex">
+                        <!-- <div class="main-product">
+                            <div class="product-image w-48 h-52 bg-white rounded-lg">
+                                <img src="data:image/jpeg;base64,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"
+                                    class="w-full h-full object-contain" alt="">
+                            </div>
+                            <div class="product-name text-gray-700 font-bold mt-2  text-sm">
+                                nintendo switch(2019)
+                            </div>
+                            <div class="product-make text-green-700 font-bold ">
+                                nintendo
+                            </div>
+                            <div class="product-rating text-yellow-300 font-bold my-1">
+                                ⭐⭐⭐⭐⭐ 4.5
+                            </div>
+                            <div class="product-price font-bold text-gray-700 text-lg">
+                                2900.0$
+                            </div>
+                            <div class="add-to-cart h-8 w-28 bg-yellow-500 flex rounded text-md cursor-pointer
+                            items-center  justify-center text-white hover:bg-yellow-600">
+                                add to cart
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script> -->
+
+
+
+
+
+</body>
+
+</html>
